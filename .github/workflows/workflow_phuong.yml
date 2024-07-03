@@ -1,0 +1,18 @@
+name: Phuong Echo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  echo-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Echo a Hello
+      run: echo "Hello, Phuong"
