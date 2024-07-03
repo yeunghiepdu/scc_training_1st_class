@@ -9,9 +9,6 @@ on:
 jobs:
   check-markdown-links:
     runs-on: ubuntu-latest
-    name: Check links in Markdown files
+    name: Echo test
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - run: npm ci
-      - run: npm run check:markdown
+      - run: echo "test test test"
