@@ -1,0 +1,17 @@
+name: nguyen
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check-markdown-links:
+    runs-on: ubuntu-latest
+    name: Check links in Markdown files
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run check:markdown
